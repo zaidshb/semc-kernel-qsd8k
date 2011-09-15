@@ -43,7 +43,7 @@
 #undef DDBG
 #endif
 
-#define DDBG(fmt, args...)
+#define DDBG(fmt, args...) printk(KERN_DEBUG "msm_camdrv: " fmt, ##args)
 
 /* ******** Local functions ************* */
 static int32_t dlt001_gpio_access(int gpio_pin, int dir);
